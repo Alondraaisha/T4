@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script language="javascript" , type="text/javascript">
+
+            /* 
+            1. alertbox
+            2. confirmbox
+            3. promptbox
+            
+            */
+
+            // alertbox
+            function alertdata(){
+                alert("this is warning msg")
+            }
+
+            //confirmbox
+            function confirmdata(){
+                var res=confirm("Do you want to continue?")
+                if (res===true)
+                {
+                    document.write("yes")
+                    return true
+                }
+                else{
+                    document.write("no")
+                    return false
+                }
+            }
+            
+            //promptbox --> fot user input 
+
+            function promptdata(){
+                var res1=prompt("enter your name :")
+                document.write("Welcome "+res1)
+            }
+            
+
+        </script>
+        <style>
+            button{
+                background-color: #0b2b58;
+                color: azure;
+            }
+            body{
+                background-color: rgb(250, 236, 219);
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="alertdata()">alertbox</button><br><br>
+        <button onclick="confirmdata()">Conformation Box</button>
+        <button onclick="promptdata()">Prompt Box</button>
+
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script language="javascript" , type="text/javascript">  
+
+        //1. Math
+        console.log("Math Objcet")
+        console.log(Math.sqrt(16))
+        console.log(Math.abs(-7))
+        console.log(Math.pow(2,3))
+        console.log(Math.max(10,20,50,70,65,35,321,45854,1341,3654,867645,5412,354,364,453,1253))
+        console.log(Math.min(10,20,50,70,65,35,321,45854,1341,3654,867645,5412,354,364,453,1253))
+        console.log(Math.ceil(10.4))
+        console.log(Math.ceil(-1.4))
+        console.log(Math.floor(54.8  ))
+        console.log(Math.floor(-84.8))
+        console.log(" ")
+
+
+        //2. String
+        //A-Z (65-90) a-z (97-122) 0-9 (48-57)
+        console.log("String Objcet")
+        x="Hello"
+        y="World"
+        x1="This is demo"
+        y1="is"
+        text="hello world , welcome to universe"
+        console.log(x.charAt(0))
+        console.log("char code of "+x.charAt(0)+" is :"+ x.charCodeAt(0))
+        console.log("char code of "+x.charAt(10)+" is :"+ x.charCodeAt(10))
+        console.log("char code of "+text.charAt(10)+" is :"+ text.charCodeAt(10))
+        console.log(x.concat(y))
+        console.log(x.replace("hell",y))
+        console.log(x.split("l"))
+        console.log(x1.split(" "))
+        console.log(x1.toUpperCase())
+        console.log(text.toLowerCase())
+        console.log(x1.substr(2,5)) //(Start index, Length)
+        console.log(text.substring(2,8))//(Strat index , Ending index(excluding))
+        console.log(x1.indexOf("demo"))
+        console.log(text.indexOf(" "))
+        console.log(text.indexOf("to"))
+        console.log(x1.indexOf("is"))
+        console.log(x1.lastIndexOf("is"))
+        console.log(text.lastIndexOf("o"))
+        console.log(x1.lastIndexOf("o"))
+        console.log(text.lastIndexOf("o", 10)) //lastIndexOf() method takes two parameters
+        console.log(x1.lastIndexOf(y1))
+        console.log(text.indexOf("lalal"))
+        console.log(" ")
+        console.log("Example  ")
+        m="ajanta"
+        f=m.indexOf("a")
+        console.log(f) //returns index of first occurrence of "a"
+        l=m.lastIndexOf("a")
+        console.log(l) //returns index of last occurrence of "a"
+        n=m.substring(f+1,l)
+        document.write(n+"</br>") //returns substring from index f+1 to l
+        console.log(n) //returns substring from index f+1 to l
+        n1=m.substr(f+1,l-1)
+        document.write(n1) //returns substring from index f+1 to l-1
+
+        //2. Date
+        console.log(" ")
+        console.log("Date Objcet")
+        var d=new Date()
+        console.log(d) // Return the currunt time according to system
+        console.log(d.getDay())
+        console.log(d.getMonth())
+        console.log(d.getFullYear())
+        console.log(d.getDate())
+        console.log(d.getHours())
+        console.log(d.getMinutes())
+        console.log(d.getTime())
+        console.log(d.getSeconds())
+   
+        var a1= d.setDate(16)
+        var b1= d.setMonth(1)
+        var c1= d.setFullYear(2026)
+         
+        console.log(d.getDate(),d.getMonth(),d.getFullYear())
+        
+        var d1=new Date()
+        function promptdata(){
+                var res1=prompt("Enter the Date :")
+                
+            }
+
+
+        </script>
+    </head>
+</html>
