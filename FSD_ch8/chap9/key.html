@@ -1,0 +1,24 @@
+<!--
+1.onkeypress (printable output)
+2.onkeydown (all )
+3.onkeyup
+
+keycode = ascii value of any key
+-->
+<html>
+    <head>
+        <script language="javascript" , type="text/javascript">
+
+           
+            function ok3(e){
+                var k=e.key
+                var kc=e.keyCode
+                document.write(k+"</br>")
+                document.write(kc)
+            }
+        </script>
+    </head>
+    <body onkeypress="ok3(event)" >
+        
+    </body>
+</html>

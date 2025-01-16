@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #f3f4f6, #ffffff);
+        }
+        .login-form {
+            width: 100%;
+            max-width: 350px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            animation: formAnimation 1s ease-in-out, float 6s ease-in-out infinite;
+        }
+        @keyframes formAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+        }
+        .login-form .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .login-form .form-group input {
+            height: 45px;
+            padding-left: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+        .login-form .form-group input:focus {
+            box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+            border-color: #2196f3;
+        }
+        .login-form .form-group .icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #666;
+            transition: all 0.3s ease-in-out;
+        }
+        .login-form .form-group input:focus + .icon {
+            color: #2196f3;
+        }
+        .login-form .btn {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border: none;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+        .login-form .btn:hover {
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <span class="icon">&#9993;</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <span class="icon">&#128274;</span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Adjust the height of the login container on resize
+        function adjustLoginContainerHeight() {
+            const loginContainer = document.querySelector('.login-container');
+            const viewportHeight = window.innerHeight;
+            loginContainer.style.height = `${viewportHeight}px`;
+        }
+
+        // Initial adjustment
+        adjustLoginContainerHeight();
+
+        // Adjust on window resize
+        window.addEventListener('resize', adjustLoginContainerHeight);
+    </script>
+</body>
+</html>

@@ -79,13 +79,35 @@
          
         console.log(d.getDate(),d.getMonth(),d.getFullYear())
         
-        var d1=new Date()
-        function promptdata(){
-                var res1=prompt("Enter the Date :")
-                
-            }
+        console.log("days between 2 date")
+        function days(date1,date2){
+            const od = 1000 * 60 * 60 * 24; // hours
+            const d1=date1.getTime()
+            const d2=date2.getTime()
+            const diff = Math.abs(d2 - d1);
+            const days = Math.ceil(diff / od);
+        }
+        function display()
+        {
+            const date = prompt("enter date (dd-mm-yyyy)")
+            const date_parts=date.split("-")
+            const d=date_parts[0]
+            const m=date_parts[1]-1
+            const y=date_parts[2]
+            const nd=new Date()
+            nd.setDate(d)
+            nd.setMonth(m)
+            nd.setFullYear(y)
+            console.log(nd)
+            const cd=new Date()
+            document.write(days(cd,nd))
 
+        }
 
         </script>
     </head>
+    <body>
+        <button onclick="display()">Calculate Days</button>
+        <h1 id="i1"></h1>
+    </body>
 </html>

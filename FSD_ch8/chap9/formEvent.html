@@ -1,0 +1,57 @@
+<!--form events
+1. onfocus
+2. onchange
+3. on blur
+4. on submit
+5. on input
+
+-->
+<html>
+    <head>
+        
+    </head>
+    <body >
+        <form onsubmit="os()">
+            <input id="un" onchange="oc()" onabort="ob()" onfocus="of()" oninput="oi()" value="hello">
+            <input type="submit">
+            
+        </form>
+        <script language="javascript" , type="text/javascript">
+            var f1=document.getElementById("un");
+            function os(){
+                alert(f1.value);
+                
+            }
+            function of(){
+                f1.stye.color="red"
+                f1.style.bgColor="yellow"
+                f1.style.fontFamily="Arial"
+                f1.style.fontSize="20px"
+                f1.style.fontWeight="bold"
+
+            }
+            function ob(){
+                f1.style.color="blue"
+                f1.style.bgColor="pink"
+                f1.style.fontFamily="Courier"
+                
+            }
+            function oc(){
+                f1.style.color="green"
+                f1.style.bgColor="#eecc34"
+                f1.style.fontFamily="Verdana"
+                f1.style.fontSize="30px"
+                f1.style.fontWeight="normal"
+                f1.style.textTransform="uppercase"
+            }
+            function oi(){
+                f1.style.color="purple"
+                f1.style.bgColor="cyan"
+                f1.style.fontFamily="Impact"
+                f1.style.fontSize="40px"
+                f1.style.fontWeight="lighter"
+                
+            }
+         </script>
+    </body>
+</html>

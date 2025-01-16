@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+    <script type="text/javascript">
+        function changeHeading() {
+            var heading = document.getElementById('heading');
+            heading.innerHTML = "Hello World";
+            heading.style.fontStyle = 'italic';
+            heading.style.fontSize = '50px';
+        }
+
+        function changeHeadingColor(color) {
+            var heading = document.getElementById('heading');
+            heading.style.color = color;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading" onclick="changeHeading()">Click on this heading</h1>
+
+    <button onclick="changeHeadingColor('red')">Red</button>
+    <button onclick="changeHeadingColor('blue')">Blue</button>
+</body>
+</html>

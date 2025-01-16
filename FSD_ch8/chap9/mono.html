@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation</title>
+    <script type="text/javascript">
+        function validate() {
+            var mobile = document.getElementById('mobile').value;
+            var email = document.getElementById('email').value;
+
+            // Validate mobile number
+            if (mobile.length !== 10 || (mobile[0] !== '9' && mobile[0] !== '8')) {
+                alert("Invalid mobile number. It should start with 9 or 8 and be 10 digits long.");
+                return false;
+            }
+
+            // Validate email ID
+            if (email.indexOf('@') < 0 || email.indexOf('.') < 0) {
+                alert("Invalid email ID. It should contain @ and .");
+                return false;
+            }
+
+            alert("Mobile number and email ID are valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile"><br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

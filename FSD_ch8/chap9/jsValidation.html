@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+</head>
+<body>
+    <form action="#" onsubmit="fun()" name="f1">
+        <input name="un" id="un">
+        <input type="password" id="pass">
+        <input type="submit" >
+    </form>
+    <script type="text/javascript">
+       function fun(){
+        var obj1=document.getElementById("un").value;
+        alert(obj1)
+        var obj2=document.f1.un.value;
+        alert   ("by element name :"+obj2)
+        var obj3=document.forms["f1"]["un"].value;
+        document.write(obj3)
+       }
+    </script>
+</body>
+</html>

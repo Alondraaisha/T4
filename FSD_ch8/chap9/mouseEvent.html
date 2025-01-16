@@ -1,0 +1,55 @@
+<!--Mouse event
+1. on click
+2. on mouseout
+3. on mouseover
+4. on mousedown
+5. on mouseup
+
+-->
+<html>
+    <head>
+        <script language="javascript" , type="text/javascript" >
+
+            function fun1(e){
+                e.style.color="red";
+                e.style.fontSize="30px";
+            }
+            function mdown(e){
+                e.style.backgroundColor="pink"
+                e.innerHTML='Text Changed'
+            }
+            function mup(e){
+                e.style.innerHTML="hello"
+                e.style.backgroundColor="yellow"
+            }
+            function mover(e){
+                 e.style.backgroundColor="blue"
+                  e.innerHTML="its a blue color"
+            }
+            function mout(e){
+                e.style.backgrountColor="black"
+                e.style.fontSize="50px";
+            }
+            function fun2(e){
+                var val=e.button;
+                console.log(e); // 0-left 1-middel 2-right
+                if (val==0){
+                    alert("letf button is clicked")
+
+                }
+                else if (val==1){
+                    alert("middle button is clicked")
+                }
+                else{
+                    alert("right button is clicked")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p onclick="fun1(this)"Hello></p>
+        <h1 onmousedown="mdown(this)" onmouseup="mup(this)" onmouseover="mover(this)"
+         onmouseout="mout(this)">Mouse events</h1>
+         <div style="width: 50%; height: 50%; border: 2px solid blue;" onmousedown="fun2(event)">test Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint debitis a sapiente, animi quas ipsa deleniti eum suscipit facere, magni sunt sed adipisci dolorem voluptates pariatur! Consectetur nesciunt quis maiores.</div>
+    </body>
+</html>
