@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form onsubmit="fun(event)">
+            <input id="t1" value="test">
+            <input type="submit">
+        </form>
+        <h1 id="test">Temp</h1>
+        <script>
+            function fun(e){
+                e.preventDefault();
+                val=document.getElementById("t1").value;
+                document.getElementById("test").innerHTML="welcome "+val;
+            }
+        </script>
+    </body>
+</html>

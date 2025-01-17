@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+    <body onkeydown="kd(this)" onkeyup="kc(this)">
+        <form onsubmit="fun(event)">
+            <input id="t1" value="test" oninput="onIp(this)" onchange="onCh(this)" onfocus="onFo(this)" >
+            <input type="submit">
+        </form>
+        <h1 id="test" onmouseup="mup(this)" onmousedown="mdo(this)" onmouseover="mov(this)" onmouseout="mot(this)"></h1>
+        <script>
+            function fun(e){
+                e.preventDefault();
+                val=document.getElementById("t1").value;
+                document.getElementById("test").innerHTML="welcome "+val;
+            }
+            function onIp(e){
+                e.style.color="red"
+                e.style.backgroundColor="yellow"
+            }
+            function onCh(e){
+                e.style.color="green"
+                e.style.backgroundColor="pink"
+            }
+            function onFo(e){
+                e.style.color="blue"
+                e.style.backgroundColor="light blue"
+            }
+            function mup(e){
+                e.style.fontSize="50px"
+                e.style.textTransform="lowercase"
+            }
+            function mdo(e){
+                e.style.fontSize="30px"
+                e.style.textTransform="uppercase"
+            }
+            function mov(e){
+                e.style.textDecoration="underline"
+                e.style.color="red"
+            }
+            function mot(e){
+                e.style.textDecoration="overline"
+                e.style.color="blue"
+            }
+            function kd(e){
+                var k=e.key
+                console.log(k)
+            }
+            function kc(e){
+               
+                console.log(e.keyCode)
+            }
+        </script>
+    </body>
+</html>

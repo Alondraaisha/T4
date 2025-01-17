@@ -1,0 +1,42 @@
+<!-- REGEX-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="t1">
+        <input type="submit" onclick="fun()">
+        <script>
+            function fun(){
+                // var pat=/abc/; contains abc
+                //var pat=/^abc/; starts with abc
+                //var pat=/abc$/; ends with abc
+                //var pat=/^abc$/; starts and end with abc
+                //var pat=/^abc/i ; ignore case sensitivity
+                //var pat=/[abc]/; a or b or c
+                //var pat=/[^abc]/; in this must need other charator with this charactor
+                //var pat=/^[0-9]$/; starts end with digit
+                //var pat=/[^0-9]/; not only digits
+                //var pat=/(x|y)/ x or y
+                // var pat=/co*/; c sathe o hoi ya na hoi chale
+                //var pat=/co+/; at least one time o with c
+                //var pat=/^\d{10}$/ --> d for [0-9]
+                //var pat=/^\d{5,8}$/ --> min 5 and max 8 digit allows
+                //var pat=/^\w{5,}$/ // --> w for [A-Z a-z 0-9] min 5 max infinte
+                //var pat=/^[a-z A-z]+$/ contains letter atleast one or more 
+                //var pat=/[^@][^.]/ --> for mail contains @ and .
+                //var pat=/\W+/  W for special charactors
+          
+
+
+                var op=document.getElementById("t1").value;
+                if (pat.test(op)){
+                    alert("Valid !!")
+                }
+                else{
+                    alert("please enter valid string")
+                }
+            }
+        </script>
+    </body>
+</html>

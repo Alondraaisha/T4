@@ -1,0 +1,35 @@
+<!--password must be 6 to 12 charactors & username should not starts with @ _ or nummbers-->
+<!-- REGEX-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        User Name: <input type="text" id="t2" placeholder="Enter the user name"><br>
+        Password: <input type="password" id="t1" placeholder="Enter password"><br>
+        <input type="submit" onclick="fun()">
+        <script>
+            function fun(){
+               p=/^_|^@|^\d/;
+               un=document.getElementById("t2").value;
+               pass=document.getElementById("t1").value;
+               if(un.length==0 || pass.length==0){
+                alert("invalid")
+               }
+               else if(p.test("t2"))
+               {
+                alert("invalid user name")
+               }
+               else if(pass.length<6 || pass.length>12){
+                alert("invalid password")
+               }
+               else{
+                alert("welcome "+ un);
+               }
+
+                
+
+            }
+        </script>
+    </body>
+</html>
